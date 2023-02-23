@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1>ToDoList</h1>
+        <div class = "addtask">
+            <h3>Add Task</h3>
+            <button id = "task" onclick="addRow()">+</button>
+        </div>
+
+        <div class = "display">
+            <h3> Sort tasks by: </h3>
+            
+            <button class = "sort">None</button>
+            <button class = "sort">Name</button>
+            <button class = "sort">Deadline</button>
+            
+        </div>
+        <table id = "table">
+            <tr>
+              <td id = "Deadline">Deadline</td>
+              <td id = "Task">Tasks</td>
+              <td id = "Done">Done ✓</td>
+            </tr>
+          </table>
+    <script>
+        src = "index.js"
+    </script>
+    </body>
+</html>

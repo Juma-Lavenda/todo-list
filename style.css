@@ -1,0 +1,76 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    font-family: 'Dosis', sans-serif;
+    
+}
+body > * {
+    grid-column: 2;
+    min-width: 0;
+    
+}
+
+h1{
+    font-size: 30px;
+    font-family: serif;
+    font-weight: lighter;
+    font-variant: small-caps;
+    margin-left: 30px;
+  }
+.addtask{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#task{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size:x-large;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.sort{
+    height: 20px;
+    width: 120px;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+.display{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+button{
+    background-color: white;
+} 
+button:hover{
+    background-color:#d8f3dc;
+}
+#Deadline{
+    width: 30%
+    
+}
+#Task{
+    width: 60%
+}
+#Done{
+    width: 10%
+}
+table{
+    width: 100%;
+}
+#Deadline, #Task, #Done{
+    text-align: center;
+    color: rgb(187, 16, 16);
+    font-weight: bold;
+    background-color: #f6fff8;
+}
+
+table, th , td {
+    border: 1px solid grey;
+  }
+  
