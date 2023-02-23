@@ -8,7 +8,8 @@
     </head>
 
     <body>
-        <h1>ToDoList</h1>
+        
+        <h1>ToDoList🧾</h1>
         <div class = "addtask">
             <h3>Add Task</h3>
             <button id = "task" onclick="addRow()">+</button>
@@ -22,15 +23,22 @@
             <button class = "sort">Deadline</button>
             
         </div>
+        <p id = "note"> *Click on deadline to filter tasks by due date</p>
         <table id = "table">
             <tr>
-              <td id = "Deadline">Deadline</td>
-              <td id = "Task">Tasks</td>
-              <td id = "Done">Done ✓</td>
+              <td contentEditable = "false" id = "Deadline">Deadline</td>
+              <td contentEditable = "false" id = "Task">Tasks</td>
+              <td contentEditable = "false" id = "Done">Done ✓</td>
             </tr>
-          </table>
-    <script>
-        src = "index.js"
-    </script>
+
+            
+          </table>          
+          
+        <div class = "congrats">
+            <p>Congratulations!!🎉 You have finished all your tasks</p>
+            <img id = "giphy" src = "congrats.webp">
+        </div>
+        
+    <script src = "index.js"></script>
     </body>
 </html>
