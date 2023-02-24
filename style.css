@@ -2,13 +2,13 @@ body{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     font-family: 'Dosis', sans-serif;
-    
 }
 
 body > * {
     grid-column: 2;
     min-width: 0;
     margin-right: 50px;
+   
     
 }
 
@@ -16,6 +16,7 @@ body > * {
     grid-column: 1/2;
     color: rgb(187, 16, 16);
     font-family: serif;
+    margin-left: 10px;
 }
 
 h1{
@@ -29,7 +30,7 @@ h1{
     display: flex;
     justify-content: end;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 #task{
     height: 30px;
@@ -72,6 +73,9 @@ button:hover{
 table{
     width: 100%;
 }
+table, thead ,th, tr, td {
+    width: auto;
+    }
 #Deadline, #Task, #Done{
     text-align: center;
     color: rgb(187, 16, 16);
@@ -79,7 +83,11 @@ table{
     background-color: #f6fff8;
 }
 
-th , td {
+#newRow{
+    display: none;
+}
+
+th , td{
     border: 1px solid grey;
     background-color: white;
   }
@@ -90,7 +98,7 @@ table{
 .congrats{
     margin-left: auto;
     margin-right: auto;
-    display: none; 
+    display: none;   
     
 }
 td{

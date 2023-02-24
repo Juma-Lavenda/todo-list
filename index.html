@@ -19,16 +19,16 @@
             <h3> Sort tasks by: </h3>
             
             <button class = "sort">None</button>
-            <button class = "sort">Name</button>
-            <button class = "sort">Deadline</button>
+            <button class = "sort" onclick="sortTableVals(2)">Name</button>
+            <button class = "sort" onclick = "sortTableVals(1)">Deadline</button>
             
         </div>
         <p id = "note"> *Click on deadline to filter tasks by due date</p>
         <table id = "table">
-            <tr>
-              <td contentEditable = "false" id = "Deadline">Deadline</td>
-              <td contentEditable = "false" id = "Task">Tasks</td>
-              <td contentEditable = "false" id = "Done">Done ✓</td>
+            <tr>  
+            <th contentEditable = "false" id = "Deadline">Deadline</th>
+            <th contentEditable = "false" id = "Task">Tasks</th>
+            <th contentEditable = "false" id = "Done">Done ✓</th>
             </tr>
 
             
