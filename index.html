@@ -19,17 +19,22 @@
             <h3> Sort tasks by: </h3>
             
             <button class = "sort">None</button>
-            <button class = "sort" onclick="sortTableVals(2)">Name</button>
-            <button class = "sort" onclick = "sortTableVals(1)">Deadline</button>
+            <button class = "sort" onclick="sortTableVals(2, false)">Name</button>
+            <button class = "sort" onclick = "sortTableVals(1, true)">Deadline</button>
             
         </div>
         <p id = "note"> *Click on deadline to filter tasks by due date</p>
         <table id = "table">
-            <tr>  
-            <th contentEditable = "false" id = "Deadline">Deadline</th>
-            <th contentEditable = "false" id = "Task">Tasks</th>
-            <th contentEditable = "false" id = "Done">Done ✓</th>
-            </tr>
+            <thead>
+                <tr>  
+                    <th contentEditable = "false" id = "Deadline">Deadline</th>
+                    <th contentEditable = "false" id = "Task">Tasks</th>
+                    <th contentEditable = "false" id = "Done">Done ✓</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
 
             
           </table>          
