@@ -1,11 +1,11 @@
+let content = document.querySelector('.congrats');
+var tableVal = document.getElementById("table");
+ let table = tableVal.tBodies[0];
+
 /*
 Adds a news row entry to the table when add task button is clicked
-// */
+ */
  function addRow(){
-
-        var tableVal = document.getElementById("table");
-        const table = tableVal.tBodies[0];
-
         var newRow = table.insertRow(-1)
         var cell1 = newRow.insertCell(0);
         var cell2 = newRow.insertCell(1);
@@ -14,22 +14,16 @@ Adds a news row entry to the table when add task button is clicked
         cell1.contentEditable = true;
         cell2.innerHTML = ' Add new task here';
         cell2.contentEditable = true;
-        cell3 .innerHTML = ' <button id = "delete" onclick = "toggleRow()">✓</button>';
-        table.appendChild(newRow)   
-
-
+        cell3 .innerHTML = ' <button id = "delete" onclick = "toggleRow(this)">✓</button>';
+        table.appendChild(newRow)  
+        content.style.display = 'none' 
               
  }
- var tableVal = document.getElementById("table");
-
-
-
+ 
 function sortTableVals(column, tag){
        
-       var tableVal = document.getElementById("table");
-       const dirPath = 1;
-       const table = tableVal.tBodies[0];
        const rowVal = Array.from(table.querySelectorAll('tr'));
+       const dirPath = 1;
        const sortedrows = rowVal.sort((a,b) => {
               const aVal = a.querySelector(`td:nth-child(${column})`);
               const bVal = b.querySelector(`td:nth-child(${column})`);
@@ -45,10 +39,60 @@ function sortTableVals(column, tag){
               return(aCol > bCol) ? 1*dirPath : -1*dirPath;
        });
        
-       while(table.firstChild){
-              table.removeChild(table.firstChild);
-       }
+       clearTable();
        table.append(...sortedrows);
 }
 
 
+
+/**
+ * A function that toggles row when button is pressed
+ */
+
+function toggleRow(v){
+       table.removeChild(v.parentNode.parentNode);
+       if(table.rows.length === 0){
+              content.style.display = 'block'
+       }
+}
+
+let arrayVal;
+
+/**
+ * Filter table
+ */
+const originalTable = table.cloneNode(true);
+
+function filterTable(dateVal){
+       const rowVal = Array.from(table.querySelectorAll('tr'));
+       arrayVal = rowVal;
+       if(dateVal.value === ''){
+              clearTable();
+              table.append(...arrayVal);
+
+       } else {
+       
+       const filteredRows = rowVal.filter(a => a.querySelector(`td:nth-child(${1})`)
+       .querySelector('input').value === dateVal.value)
+       clearTable();
+       table.append(...filteredRows);
+       }
+}
+
+/**
+ * Clears the rows in the table when called
+ */
+
+function  clearTable(){
+       while(table.firstChild){
+              table.removeChild(table.firstChild);
+       }
+}
+
+/**
+ * Restores the table to original entries when called.
+ */
+
+function restoreTable() {
+       table.parentNode.replaceChild(originalTable, table);
+     }

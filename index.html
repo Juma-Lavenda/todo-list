@@ -14,15 +14,19 @@
             <h3>Add Task</h3>
             <button id = "task" onclick="addRow()">+</button>
         </div>
-
+        
         <div class = "display">
             <h3> Sort tasks by: </h3>
-            
             <button class = "sort">None</button>
             <button class = "sort" onclick="sortTableVals(2, false)">Name</button>
             <button class = "sort" onclick = "sortTableVals(1, true)">Deadline</button>
             
         </div>
+        <div class = "filter">
+            <h3> Filter deadline:</h3>
+            <input id="search" type = "date"  oninput = "filterTable(this)">
+        </div>
+
         <p id = "note"> *Click on deadline to filter tasks by due date</p>
         <table id = "table">
             <thead>
@@ -41,7 +45,7 @@
           
         <div class = "congrats">
             <p>Congratulations!!🎉 You have finished all your tasks</p>
-            <img id = "giphy" src = "congrats.webp">
+            <img id = "giphy" src = "job.webp">
         </div>
         
     <script src = "index.js"></script>

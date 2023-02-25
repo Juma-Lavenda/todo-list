@@ -2,6 +2,8 @@ body{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     font-family: 'Dosis', sans-serif;
+    background-color:lightslategray;
+   
 }
 
 body > * {
@@ -14,7 +16,7 @@ body > * {
 
 #note{
     grid-column: 1/2;
-    color: rgb(187, 16, 16);
+    color: white;
     font-family: serif;
     margin-left: 10px;
 }
@@ -54,6 +56,20 @@ h1{
     justify-content: space-evenly;
 
 }
+.filter{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    
+}
+#search{
+    margin-left: 50px;
+    height: 20px;
+    width: 110px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
 button{
     background-color: white;
 } 
@@ -61,14 +77,16 @@ button:hover{
     background-color:#d8f3dc;
 }
 #Deadline{
-    width: 30%
+    width: 30%;
+    color: rgb(187, 16, 16);    
     
 }
 #Task{
-    width: 60%
+    width: 60%;
 }
 #Done{
-    width: 10%
+    width: 10%;
+    color: green;
 }
 table{
     width: 100%;
@@ -78,10 +96,10 @@ table, thead ,th, tr, td {
     }
 #Deadline, #Task, #Done{
     text-align: center;
-    color: rgb(187, 16, 16);
     font-weight: bold;
-    background-color: #f6fff8;
+     background-color: lightgrey; 
 }
+
 
 #newRow{
     display: none;
@@ -92,13 +110,13 @@ th , td{
     background-color: white;
   }
 table{
-    background-color: #d8f3dc;
-    border: 1px solid grey;
+    background-color: #9ea7a0;
+    border: 1px solid grey
 }
 .congrats{
     margin-left: auto;
     margin-right: auto;
-    display: none;   
+    display: none;     
     
 }
 td{
@@ -117,6 +135,10 @@ td{
     margin-bottom: 5px;
     color:  rgb(187, 16, 16);
     font-weight: bold;
+}
+#delete:hover{
+    color: green;
+    background-color: lightcyan;
 }
 #date{
     margin-left: 20px;
