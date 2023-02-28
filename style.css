@@ -9,16 +9,7 @@ body{
 body > * {
     grid-column: 2;
     min-width: 0;
-    margin-right: 50px;
-   
-    
-}
-
-#note{
-    grid-column: 1/2;
-    color: white;
-    font-family: serif;
-    margin-left: 10px;
+    margin-right: 50px;   
 }
 
 h1{
