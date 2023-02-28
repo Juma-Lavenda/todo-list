@@ -33,8 +33,8 @@ function sortTableVals(column, tag){
                       aCol = aVal.querySelector('input').value;
                       bCol = bVal.querySelector('input').value;
               } else{
-                      aCol = aVal.textContent.trim().toLowerCase();
-                      bCol = bVal.textContent.trim().toLowerCase();}
+                      aCol = aVal.textContent.toLowerCase().trim();
+                      bCol = bVal.textContent.toLowerCase().trim();}
 
               return(aCol > bCol) ? 1*dirPath : -1*dirPath;
        });
