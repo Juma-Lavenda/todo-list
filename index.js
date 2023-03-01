@@ -1,6 +1,6 @@
 let content = document.querySelector('.congrats');
-var tableVal = document.getElementById("table");
- let table = tableVal.tBodies[0];
+const tableVal = document.getElementById("table");
+let table = tableVal.tBodies[0];
 
 /*
 Adds a news row entry to the table when add task button is clicked
@@ -62,10 +62,13 @@ let arrayVal;
  * Filter table
  */
 const originalTable = table.cloneNode(true);
+Object.freeze(originalTable);
 
 function filterTable(dateVal){
        const rowVal = Array.from(table.querySelectorAll('tr'));
+
        arrayVal = rowVal;
+       // Somehow restore the original table PS: not working
        if(dateVal.value === ''){
               clearTable();
               table.append(...arrayVal);
@@ -83,7 +86,7 @@ function filterTable(dateVal){
  * Clears the rows in the table when called
  */
 
-function  clearTable(){
+var clearTable = () => {
        while(table.firstChild){
               table.removeChild(table.firstChild);
        }
@@ -91,8 +94,7 @@ function  clearTable(){
 
 /**
  * Restores the table to original entries when called.
+ * originalTable var mutates so not working 
  */
 
-function restoreTable() {
-       table.parentNode.replaceChild(originalTable, table);
-     }
+var restoreTable = () => table.parentNode.replaceChild(originalTable, table);
